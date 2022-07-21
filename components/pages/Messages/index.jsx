@@ -74,6 +74,7 @@ export const Message = ({ userId }) => {
         });
         const newMessage = await res.json()
         setMessages([...messages, newMessage]);
+        lastMsg.current.scrollIntoView({ behavior: "smooth" });
     }
 
     return (
