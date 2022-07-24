@@ -173,7 +173,7 @@ export const Message = ({ userId }) => {
                         value={messageInput}
                         onChange={(e) => setMessageInput(e.target.value)}
                     />
-                    <button onClick={createMessage} disabled={!toId}>
+                    <button onClick={createMessage} disabled={!toId || messageInput == ""}>
                         <FontAwesomeIcon icon={faPaperPlane} />
                     </button>  
                     <button onClick={() => getAllMessages(toId, userId)} disabled={!toId}><FontAwesomeIcon icon={faRotateLeft} /> Refresh</button>
